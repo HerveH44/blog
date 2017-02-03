@@ -71,6 +71,7 @@
                 plain: true,
                 className: 'ngdialog-theme-default',
                 controller: [ 'authManagerService', function( authManagerService ) {
+                    var $ctrl = this;
                     $ctrl.doRegister = function() {
                         authManagerService.register( {
                                 username: $ctrl.username,
