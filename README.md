@@ -1,2 +1,2 @@
 # blog
-Blog using ExpressJS for Backend and Angular JS SDK for frontend (and maybe other modules)
+Blog using Node, ExpressJS and several middlewares for Backend and AngularJS SDK, materialize for frontend (and other modules)
