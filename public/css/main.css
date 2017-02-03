@@ -1,0 +1,24 @@
+.modal {
+  width: 45% !important ;
+  height: 100% !important ;
+}
+
+.registererror {
+  color: #ff0000;
+  font-size: 1.2em;
+}
+
+.registervalid {
+  color: #00ff00;
+  font-size: 1.2em;
+}
+
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }

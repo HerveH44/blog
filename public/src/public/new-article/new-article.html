@@ -1,0 +1,45 @@
+<div class="container">
+
+    <!-- Formulaire Nouvel Article -->
+    <div class="row center-align">
+      <h4>Nouvel Article</h4>
+    </div>
+    <div class="row">
+        <form class="col s12">
+
+            <!-- Titre -->
+            <div class="input-field col s12">
+                <input id="titre" type="text" class="validate" ng-model="$ctrl.article.titre">
+                <label for="titre">Titre de l'article</label>
+            </div>
+
+            <!-- Message -->
+            <div class="input-field col s12">
+                <!-- <textarea id="textarea1" class="materialize-textarea" ng-model="$ctrl.article.message"></textarea> -->
+                <ng-quill-editor ng-model="$ctrl.article.message"></ng-quill-editor>
+            </div>
+
+            <!-- Image -->
+            <div class="file-field input-field col s12 m6">
+              <div class="btn">
+                <span>image</span>
+                <input disabled type="file" ng-model="$ctrl.article.image">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+
+            <!-- Checkbox "désactivé" -->
+            <div class="input-field col s12 m6">
+                <input id="disable" type="checkbox" ng-model="$ctrl.article.disable">
+                <label for="disable">Article désactivé ?</label>
+            </div>
+        </form>
+        <div class="input-field col s12 center-align">
+            <a ng-click="$ctrl.save();" class="btn-large green waves-effect btn-floating"><i class="material-icons">done</i></a>
+        </div>
+    </div>
+    <!-- Fin formulaire Nouvel article -->
+
+</div>

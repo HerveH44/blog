@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+
+        <!-- Boucle sur les articles  -->
+        <div ng-repeat="article in $ctrl.articles" class="col s12">
+            <div class="card hoverable">
+                <a ui-sref="public.article({article: article, slug: article.slug, articleId: article._id})">
+                    <div class="card-image">
+                        <img ng-if="article.image" ng-src="images/articles/{{article._id}}/{{article.image}}" alt="China tea">
+                        <span class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p>{{article.titre}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Fin de boucle sur articles -->
+
+    </div>
+</div>

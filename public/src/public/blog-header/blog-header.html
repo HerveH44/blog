@@ -1,0 +1,68 @@
+<nav class="light-green brown" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Plip's Logo!</a>
+        <ul id="slide-out" class="side-nav">
+          <li><a ui-sref="public.home" class="btn waves-effect waves-light"><i class="material-icons">home</i>Home</a></li>
+
+            <!-- Si authentifié -->
+          <li ng-if="$ctrl.isAuthenticated();" ui-sref-active="active"><a ui-sref="public.articles-editor" class="btn waves-effect waves-light"><i class="material-icons left">insert_chart</i>Admin</a></li>
+          <li ng-if="$ctrl.isAuthenticated();" ui-sref-active="active"><a ui-sref="public.newarticle" class="btn waves-effect waves-light"><i class="material-icons left">mode_edit</i>Add</a></li>
+          <li ng-if="$ctrl.isAuthenticated();"><a ng-click="$ctrl.doLogout();" class="waves-effect waves-light btn"><i class="material-icons left">clear</i>Out</a></li>
+
+            <!-- Si non authentifié -->
+          <li ng-if="!$ctrl.isAuthenticated();"><a href="#login-modal" class="waves-effect waves-light btn"><i class="material-icons left">account_circle</i>Login</a></li>
+        </ul>
+        <a href="" data-activates="slide-out" class="button-collapse show-on-large right"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li ng-if="!$ctrl.isAuthenticated();"><a href="#login-modal" class="waves-effect waves-light"><i class="material-icons left">account_circle</i></a></li>
+            <li ng-if="$ctrl.isAuthenticated();"><a ng-click="$ctrl.doLogout();" class="waves-effect waves-light"><i class="material-icons left">clear</i></a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Modal Structure -->
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <div class="container">
+          <div class="center-align">
+            <h5>Login</h5>
+          </div>
+            <!-- Formulaire Login -->
+            <div class="row">
+                <form class="col s12">
+                    <div class="row modal-form-row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="username" type="text" class="validate" ng-model="$ctrl.username">
+                            <label for="username">Identifiant</label>
+                        </div>
+                    </div>
+                    <div class="row modal-form-row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="password" type="password" class="validate" ng-model="$ctrl.password">
+                            <label for="password">Mot de passe</label>
+                        </div>
+                    </div>
+                    <center>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <button ng-click="$ctrl.doLogin();" class="col s12 btn btn-large waves-effect center-align">
+                              S'identifier
+                            </button>
+                          </div>
+                        </div>
+                   </center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <div class="container">
+            <h2>Déconnexion</h2>
+            <p>Souhaitez-vous vous déconnecter?</p>
+        </div>
+    </div>
+</div>

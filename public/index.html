@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The plip's blog</title>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.min.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-plain.min.css">
+    <link rel="stylesheet" href="css/ngDialog.min.css">
+    <!-- endinject -->
+
+    <!-- Style -->
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.1.5/quill.snow.css">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.1.5/quill.bubble.css">
+
+</head>
+
+<body ng-app="main" ng-strict-di>
+    <header>
+      <blog-header></blog-header>
+    </header>
+
+
+    <main>
+    <ui-view>
+        <div class="text-center initial-loading">
+            <h2>Loading Site...</h2>
+        </div>
+    </ui-view>
+    </main>
+
+    <footer class="page-footer brown">
+      <blog-footer></blog-footer>
+    </footer>
+
+
+    <!-- lib:js -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="lib/angular-resource.min.js"></script>
+    <script src="lib/materialize.min.js"></script>
+    <script src="lib/ngDialog.min.js"></script>
+    <script src="lib/ng-file-upload-all.min.js"></script>
+    <script src="lib/ng-file-upload-shim.min.js"></script>
+    <script type="text/javascript" src="//cdn.quilljs.com/1.1.5/quill.js"></script>
+    <script src="lib/ng-quill.min.js"></script>
+
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <script src="src/public/public.module.js"></script>
+    <script src="src/public/articles-editor/article-editor/article-editor.component.js"></script>
+    <script src="src/public/new-article/new-article.component.js"></script>
+    <script src="src/public/home/home.component.js"></script>
+    <script src="src/public/blog-header/blog-header.component.js"></script>
+    <script src="src/public/blog-footer/blog-footer.component.js"></script>
+    <script src="src/public/articles-editor/articles-editor.component.js"></script>
+    <script src="src/public/article/article.component.js"></script>
+    <script src="src/common/common.module.js"></script>
+    <script src="src/common/services/users.service.js"></script>
+    <script src="src/common/services/articles.service.js"></script>
+    <script src="src/admin/admin.module.js"></script>
+    <script src="src/admin/services/localstorage.service.js"></script>
+    <script src="src/admin/services/authredirector.service.js"></script>
+    <script src="src/admin/services/authmanager.service.js"></script>
+    <script src="src/public/public.routes.js"></script>
+    <script src="src/admin/auth.interceptor.js"></script>
+    <script src="src/admin/admin.routes.js"></script>
+    <script src="src/main.module.js"></script>
+    <!-- endinject -->
+
+
+</body>
+
+</html>

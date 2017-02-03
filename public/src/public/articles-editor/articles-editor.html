@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col s3 collection">
+      <a ng-repeat="article in $ctrl.articles"
+         class="col s12  collection-item"
+         ui-sref='public.articles-editor.article({articleId: article._id, article: article})'>
+        <h6>{{article.titre}}</h6>
+      </a>
+    </div>
+    <div class="col s9">
+      <ui-view></ui-view>
+    </div>
+  </div>
+</div>
