@@ -3,6 +3,6 @@
 /**
  * Public application. Includes the common module and ui-router.
  */
-angular.module('public', ['ui.router', 'common', 'ngFileUpload','ngQuill'])
+angular.module('public', ['ui.router', 'common', 'ngFileUpload','ngQuill', 'ngDialog'])
 
 })();
