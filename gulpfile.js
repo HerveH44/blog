@@ -14,7 +14,7 @@ gulp.task('browser-sync', ['nodemon'], function() {
         proxy: "localhost:3000", // local node app address
         port: 5000, // use *different* port than above
         notify: true,
-        browser: "chromium",
+        //browser: "chromium",
         files: "public/**/*"
     });
 });

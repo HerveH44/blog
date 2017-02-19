@@ -32,42 +32,42 @@
             Materialize.toast( 'Au revoir !', 3000 );
         };
 
-        ctrl.openRegister = function() {
+        $ctrl.openRegister = function() {
             ngDialog.open( {
-                template: '<div class="container">\
-          <div class="center-align">\
-            <h5>Register</h5>\
-          </div>\
-            <!-- Formulaire Login -->\
-            <div class="row">\
-                <form ng-sbmit="$ctrl.doRegister()" class="col s12">\
-                    <div class="row modal-form-row">\
-                        <div class="input-field col s12">\
-                            <i class="material-icons prefix">account_circle</i>\
-                            <input id="username" type="text" class="validate" ng-model="$ctrl.username">\
-                            <label for="username">Identifiant</label>\
-                        </div>\
-                    </div>\
-                    <div class="row modal-form-row">\
-                        <div class="input-field col s12">\
-                            <i class="material-icons prefix">lock</i>\
-                            <input id="password" type="password" class="validate" ng-model="$ctrl.password">\
-                            <label for="password">Mot de passe</label>\
-                        </div>\
-                    </div>\
-                    <center>\
-                        <div class="row">\
-                          <div class="input-field col s12">\
-                            <button type="submit" class="col s12 btn btn-large waves-effect center-align">\
-                              Sidentifier\
-                            </button>\
-                          </div>\
-                        </div>\
-                   </center>\
-                </form>\
-            </div>\
-        </div>\
-    </div>'
+                template: "<div class=''container'>\  " +
+"          <div class="center-align">\ " +
+"            <h5>Register</h5>\ " +
+"          </div>\ " +
+"            <!-- Formulaire Login -->\ " +
+"            <div class="row">\ " +
+"                <form ng-sbmit="$ctrl.doRegister()" class="col s12">\ " +
+"                    <div class="row modal-form-row">\ " +
+"                        <div class="input-field col s12">\ " +
+"                            <i class="material-icons prefix">account_circle</i>\ " +
+"                            <input id="username" type="text" class="validate" ng-model="$ctrl.username">\ " +
+"                            <label for="username">Identifiant</label>\ " +
+"                        </div>\ " +
+"                    </div>\ " +
+"                    <div class="row modal-form-row">\ " +
+"                        <div class="input-field col s12">\ " +
+"                            <i class="material-icons prefix">lock</i>\ " +
+"                            <input id="password" type="password" class="validate" ng-model="$ctrl.password">\ " +
+"                            <label for="password">Mot de passe</label>\ " +
+"                        </div>\ " +
+"                    </div>\ " +
+"                    <center>\ " +
+"                        <div class="row">\ " +
+"                          <div class="input-field col s12">\ " +
+"                            <button type="submit" class="col s12 btn btn-large waves-effect center-align">\ " +
+"                              Sidentifier\ " +
+"                            </button>\ " +
+"                          </div>\ " +
+"                        </div>\ " +
+"                   </center>\ " +
+"                </form>\ " +
+"            </div>\ " +
+"        </div>\ " +
+"    </div>",
                 plain: true,
                 className: 'ngdialog-theme-default',
                 controller: [ 'authManagerService', function( authManagerService ) {
@@ -87,7 +87,7 @@
                 } ],
                 controllerAs: '$ctrl'
             } );
-        }
+        };
 
 
 

@@ -10,8 +10,8 @@ angular.module("public")
     }
 });
 
-ArticleEditorController.$inject = ['Articles', 'Upload'];
-function ArticleEditorController(Articles, Upload) {
+ArticleEditorController.$inject = ['Articles', 'Upload', '$timeout'];
+function ArticleEditorController(Articles, Upload, $timeout) {
     var $ctrl = this;
 
     $ctrl.save = function() {
@@ -98,9 +98,13 @@ function ArticleEditorController(Articles, Upload) {
      //Since the compilation process is rather different in AngularJS there is no
      //direct mapping and care should be taken when upgrading.
     $ctrl.$postLink = function() {
-        Materialize.updateTextFields();
-        $('#textarea1').trigger('autoresize');
     };
+
+    $ctrl.onEditorCreated = function (editor) {
+        $timeout(
+            editor.clipboard.dangerouslyPasteHTML(0, $ctrl.message)
+            , 0);
+    }
 }
 
 })();
