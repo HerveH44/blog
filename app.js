@@ -9,7 +9,8 @@ const passport      = require( 'passport' );
 const LocalStrategy = require( 'passport-local' ).Strategy;
 const config        = require( './config/config' );
 const dbName        = 'blog';
-const url           = `mongodb://localhost:27017/${dbName}`;
+// const url           = `mongodb://localhost:27017/${dbName}`;
+const url           = `mongodb://herveh:E054377F@ds157439.mlab.com:57439/heroku_sknvf3cs/`;
 
 mongoose.connect( url );
 let db = mongoose.connection;
