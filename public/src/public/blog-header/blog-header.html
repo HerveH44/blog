@@ -30,7 +30,7 @@
           </div>
             <!-- Formulaire Login -->
             <div class="row">
-                <form ng-sbmit="$ctrl.doLogin()" class="col s12">
+                <form class="col s12">
                     <div class="row modal-form-row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
@@ -48,7 +48,7 @@
                     <center>
                         <div class="row">
                           <div class="input-field col s12">
-                            <button type="submit" class="col s12 btn btn-large waves-effect center-align">
+                            <button ng-click="$ctrl.doLogin()" class="col s12 btn btn-large waves-effect center-align">
                               S'identifier
                             </button>
                           </div>
