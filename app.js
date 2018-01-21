@@ -8,8 +8,8 @@ const mongoose      = require( 'mongoose' );
 const passport      = require( 'passport' );
 const LocalStrategy = require( 'passport-local' ).Strategy;
 const config        = require( './config/config' );
-const dbName        = 'blog';
-const url           = config.mongoUrl;
+const dbName        = config.dbName;
+const url           = config.mongoUrl + dbName;
 
 mongoose.connect( url );
 let db = mongoose.connection;
